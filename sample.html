@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip-Path Component</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.clipped-component {
+    width: 400px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    background-color: white; /* The main fill color */
+    border: 2px solid black; /* The outline */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* Optional: add some depth */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width/height */
+
+    /* The magic happens here! */
+clip-path: path("M 0,10 L 10,0 L  Z");
+}
+</style>
+<body>
+    <div class="clipped-component">
+        <h1>Hello there!</h1>
+        <p>This is a component shaped with clip-path.</p>
+    </div>
+</body>
+</html>
