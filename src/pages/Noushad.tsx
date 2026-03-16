@@ -124,8 +124,8 @@ const Noushad: React.FC = () => {
           {/* Profile photo — bleeds over the white card */}
           <div className="w-[260px] h-[200px] absolute bottom-28 left-1/2 -translate-x-1/2 z-20">
             <img
-              src="/prfileimage/muneeb-image.png"
-              alt="Muneeb Cholayil"
+              src="/prfileimage/noushad-image.png"
+              alt="Noushadh EP"
               className="w-full h-full object-cover object-top block"
             />
           </div>
