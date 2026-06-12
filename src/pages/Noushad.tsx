@@ -63,7 +63,18 @@ const Noushad: React.FC = () => {
 
   const handleSaveClick = () => {
     handleIconTap();
-    const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Noushadh EP\nORG:Aurify\nTITLE:Business Associate\nTEL;TYPE=CELL:+971545872868\nEMAIL;TYPE=INTERNET:noushad@aurify.global\nEND:VCARD\n`;
+    const vcardData = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "N:EP;Noushadh;;;",
+      "FN:Noushadh EP",
+      "ORG:Aurify",
+      "TITLE:Business Associate",
+      "TEL;TYPE=CELL:+971545872868",
+      "EMAIL;TYPE=INTERNET:noushad@aurify.global",
+      "END:VCARD",
+      "",
+    ].join("\r\n");
     const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");

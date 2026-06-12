@@ -63,7 +63,18 @@ const Muneeb: React.FC = () => {
 
     const handleSaveClick = () => {
         handleIconTap();
-        const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Muneeb Cholayil\nORG:Aurify\nTITLE:CEO\nTEL;TYPE=CELL:+971567001568\nEMAIL;TYPE=INTERNET:muneeb@aurify.global\nEND:VCARD\n`;
+        const vcardData = [
+            "BEGIN:VCARD",
+            "VERSION:3.0",
+            "N:Cholayil;Muneeb;;;",
+            "FN:Muneeb Cholayil",
+            "ORG:Aurify",
+            "TITLE:CEO",
+            "TEL;TYPE=CELL:+971567001568",
+            "EMAIL;TYPE=INTERNET:muneeb@aurify.global",
+            "END:VCARD",
+            "",
+        ].join("\r\n");
         const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8" });
         const url = URL.createObjectURL(blob);
         const link = document.createElement("a");

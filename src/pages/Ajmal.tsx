@@ -63,7 +63,18 @@ const Ajmal: React.FC = () => {
 
   const handleSaveClick = () => {
     handleIconTap();
-    const vcardData = `BEGIN:VCARD\nVERSION:3.0\nFN:Muhammed Ajmal TK\nORG:Aurify\nTITLE:Business Manager\nTEL;TYPE=CELL:+971585023411\nEMAIL;TYPE=INTERNET:ajmal@aurify.global\nEND:VCARD\n`;
+    const vcardData = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "N:TK;Muhammed Ajmal;;;",
+      "FN:Muhammed Ajmal TK",
+      "ORG:Aurify",
+      "TITLE:Business Manager",
+      "TEL;TYPE=CELL:+971585023411",
+      "EMAIL;TYPE=INTERNET:ajmal@aurify.global",
+      "END:VCARD",
+      "",
+    ].join("\r\n");
     const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
