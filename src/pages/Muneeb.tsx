@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import AurifyNewLogo from "../assets/profilecomponets/aurify-new-logo.svg";
+import AurifyNewLogo from "../assets/profilecomponets/aurify-logo.svg";
 import BgLogo from "../assets/profilecomponets/bg-logo.svg";
 import Facebook from "../assets/profilecomponets/facebook.svg";
 import Instagram from "../assets/profilecomponets/instagram.svg";
@@ -128,7 +128,7 @@ const Muneeb: React.FC = () => {
 
                     {/* Aurify logo */}
                     <div className="pt-[22px] flex flex-col justify-center items-center gap-0.5 z-10">
-                        <img src={AurifyNewLogo} alt="Aurify" className="h-20" />
+                        <img src={AurifyNewLogo} alt="Aurify" className="h-14" />
                         {/* <img src={AurifySubLogo} alt="Technologies" className="h-3.5 mt-0.5 opacity-85" /> */}
                     </div>
 
